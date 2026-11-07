@@ -1,0 +1,18 @@
+:root {
+  color-scheme: dark;
+  --mint: #00ff9f;
+  --green: #10b981;
+  --deep: #064e3b;
+  --deepest: #032c22;
+  --surface: #0a3d30;
+  --surface-raised: #0e4938;
+  --text: #effff7;
+  --muted: #9dc6b4;
+  --line: rgba(179, 255, 218, .13);
+  --danger: #ff8585;
+  --radius: 18px;
+  --shadow: 0 24px 70px rgba(0, 0, 0, .24);
+  --font-body: "Noto Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+  --font-display: "Prompt", "Noto Sans Thai", "Leelawadee UI", sans-serif;
+  --font: var(--font-body);
+}

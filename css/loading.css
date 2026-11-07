@@ -1,0 +1,11 @@
+.loading-screen { position: fixed; z-index: 20; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; overflow: hidden; background: radial-gradient(ellipse at 50% 46%, #0c6047 0%, #064e3b 37%, #032c22 78%); transition: opacity .45s ease, visibility .45s ease; }
+.loading-screen::before { position: absolute; top: 50%; left: 50%; width: min(78vw, 430px); aspect-ratio: 1; border: 1px solid rgba(168,255,215,.12); border-radius: 50%; box-shadow: 0 0 0 22px rgba(0,255,159,.025), 0 0 90px rgba(0,255,159,.12); content: ""; transform: translate(-50%,-55%); animation: loading-halo 4s ease-in-out infinite; }
+.loading-screen.is-hidden { visibility: hidden; opacity: 0; }
+.loading-mark { position: relative; z-index: 1; display: block; width: min(76vw, 310px); height: auto; max-height: 210px; object-fit: contain; filter: drop-shadow(0 14px 28px rgba(0,0,0,.24)); animation: school-bob 3s cubic-bezier(.45,0,.55,1) infinite; }
+.loading-track { position: relative; z-index: 1; width: min(48vw, 190px); height: 5px; overflow: hidden; border: 1px solid rgba(208,255,230,.16); border-radius: 10px; background: rgba(255,255,255,.1); }
+.loading-track span { display: block; width: 45%; height: 100%; border-radius: inherit; background: var(--mint); animation: loading-sweep 1s ease-in-out infinite; }
+.loading-label { position: relative; z-index: 1; color: #d7f4e5; font-size: .88rem; letter-spacing: .01em; }
+@keyframes loading-sweep { from { transform: translateX(-110%); } to { transform: translateX(250%); } }
+@keyframes school-bob { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-8px) scale(1.025); } }
+@keyframes loading-halo { 0%,100% { opacity: .65; scale: .96; } 50% { opacity: 1; scale: 1.04; } }
+@media (prefers-reduced-motion: reduce) { .loading-mark,.loading-track span,.loading-screen::before { animation-duration: 2.5s; } }

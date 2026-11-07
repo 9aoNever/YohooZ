@@ -1,0 +1,27 @@
+.site-header { position: relative; z-index: 3; border-bottom: 1px solid rgba(6,78,59,.1); background: #fff; box-shadow: 0 5px 22px rgba(3,44,34,.07); animation: header-arrive .65s cubic-bezier(.2,.8,.2,1) both; }
+.navbar { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: #123d30; font-size: .94rem; font-weight: 800; letter-spacing: .055em; }
+.brand img { flex: 0 0 auto; }
+.brand .brand-logo { width: 54px; height: 54px; object-fit: contain; border-radius: 12px; background: #fff; }
+.brand:hover .brand-logo { transform: translateY(-2px) rotate(-3deg); }
+.brand-logo { transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.brand b { color: #07845d; }
+.nav-links { display: flex; align-items: center; gap: 27px; color: #386b59; font-size: .88rem; }
+.nav-links > a:not(.button):hover { color: #07845d; }
+.menu-toggle { display: none; width: 42px; height: 42px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: transparent; }
+.menu-toggle.game-btn { min-height: 42px; padding: 8px 10px; border: 0; border-radius: 14px; }
+.menu-toggle span { display: block; width: 19px; height: 2px; margin: 3px 0; background: #0a3d2e; }
+.site-footer { margin-top: 70px; border-top: 1px solid rgba(6,78,59,.1); background: #fff; box-shadow: 0 -5px 22px rgba(3,44,34,.04); }
+.footer-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: #386b59; font-size: .82rem; }
+.footer-inner p { margin: 0; }
+.footer-inner .brand { color: #123d30; font-size: .8rem; }
+.footer-brand .brand-logo { width: 42px; height: 42px; }
+@media (max-width: 700px) {
+  .menu-toggle { display: block; }
+  .nav-links { position: absolute; top: calc(100% - 1px); left: 0; right: 0; display: none; align-items: stretch; gap: 6px; padding: 14px 24px 20px; border-bottom: 1px solid rgba(6,78,59,.1); background: #fff; }
+  .nav-links.is-open { display: flex; flex-direction: column; }
+  .nav-links > a:not(.button) { padding: 8px 0; }
+  .nav-links .button { align-self: flex-start; }
+  .footer-inner { min-height: 100px; flex-wrap: wrap; justify-content: center; padding-block: 18px; text-align: center; }
+  .footer-inner p { width: 100%; order: 2; }
+}
